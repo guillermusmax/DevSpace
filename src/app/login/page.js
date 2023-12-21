@@ -17,8 +17,6 @@ import { ThemeProvider } from "@mui/material/styles";
 import { Paper } from "@mui/material";
 import Link from "next/link";
 import { Kanit } from "next/font/google";
-import { theme } from "./theme";
-import { useStyles } from "../layout";
 
 const kanit = Kanit({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -35,7 +33,7 @@ const wallpaperStyle = {
 };
 
 const correoInputStyle = {
-  backgroundColor: theme.palette.background.input,
+  backgroundColor: "el_color_que_desees",
   marginTop: "20px",
   borderRadius: "40px",
   width: "420px",
@@ -44,7 +42,7 @@ const correoInputStyle = {
 };
 
 const passwordInputStyle = {
-  backgroundColor: theme.palette.background.input,
+  backgroundColor: "el_color_que_desees",
   marginTop: "30px",
   borderRadius: "40px",
   width: "420px",
@@ -53,17 +51,17 @@ const passwordInputStyle = {
 };
 
 const checkboxStyle = {
-  color: theme.palette.primary.main,
+  color: "el_color_que_desees",
 };
 
 const checkboxLabelStyle = {
+  color: "el_color_que_desees",
   marginRight: "104px",
-  color: theme.palette.secondary.label,
 };
 
 const linkLabelStyle = {
   alignSelf: "center",
-  color: theme.palette.secondary.label,
+  color: "el_color_que_desees",
   marginTop: "-2px",
   marginLeft: "25px",
   textDecoration: "underline",
@@ -72,7 +70,7 @@ const linkLabelStyle = {
 const buttonStyle = {
   marginTop: "40px",
   borderRadius: "10px",
-  borderColor: theme.palette.primary.main,
+  borderColor: "el_color_que_desees",
   width: "147px",
   alignSelf: "center",
   fontSize: "18px",
@@ -118,7 +116,7 @@ export default function Login() {
 
   return (
     <div style={wallpaperStyle}>
-      <Paper style={useStyles.paperSmall} elevation={3}>
+      <Paper style={{/* styles específicos para el Paper */}} elevation={3}>
         <Image
           style={{ marginTop: "54px" }}
           src={"/assets/Logo.png"}
@@ -127,9 +125,9 @@ export default function Login() {
           alt="Logo app"
         />
         <div style={{ display: "inline-flex", fontSize: "46px", marginTop: "10px" }}>
-          Iniciar<div style={{ color: theme.palette.primary.dark, marginLeft: "10px" }}>Sesión</div>
+          Iniciar<div style={{ color: "el_color_que_desees", marginLeft: "10px" }}>Sesión</div>
         </div>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={{/* theme personalizado si es necesario */}}>
           <form onSubmit={handleSubmit}>
             <FormGroup className={kanit.className}>
               <Input
@@ -137,7 +135,7 @@ export default function Login() {
                 onChange={handleChangeCorreo}
                 className={kanit.className}
                 style={correoInputStyle}
-                placeholder="Correo Institucional"
+                placeholder="Correo"
               />
               <div
                 style={{
