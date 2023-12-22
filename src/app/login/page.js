@@ -23,16 +23,16 @@ import { useStyles } from "../layout";
 const kanit = Kanit({ subsets: ['latin'], weight: ["400", "700"] });
 
 const wallpaperStyle = {
-    backgroundImage: "url('/assets/LoginWallpaper.svg')",
+    backgroundImage: "url('/assets//assets/LoginWallpaper.svg')",
     backgroundColor: "white",
-    backgroundSize: "contain",
+    backgroundSize: "cover",  // Cambiado a "cover" para ocupar completamente el fondo
     backgroundPosition: "right center",
     backgroundRepeat: "no-repeat",
     minHeight: "100vh",
-    minWidth: "100vw",
+    minWidth: "100vw",  // Cambiado a "100vw" para ocupar completamente el ancho de la pantalla
     display: "flex",
-    flexDirection: "",
-};
+    flexDirection: "column",  // Puedes ajustar esto según tus necesidades
+  };
 
 const correoInputStyle = {
     backgroundColor: theme.palette.background.input,
@@ -53,7 +53,7 @@ const passwordInputStyle = {
 };
 
 const checkboxStyle = {
-    color: theme.palette.primary.main
+    color: "#466bb0",
 };
 
 const checkboxLabelStyle = {
@@ -72,11 +72,13 @@ const linkLabelStyle = {
 const buttonStyle = {
     marginTop: "40px",
     borderRadius: "10px",
-    borderColor: theme.palette.primary.main,
+    borderColor: "#466bb0",
     width: "147px",
     alignSelf: "center",
     fontSize: "18px",
     textTransform: "capitalize",
+    color: "#97b3d2",
+   
 };
 
 export default function Login() {
@@ -120,13 +122,13 @@ export default function Login() {
             <Paper style={useStyles.paperSmall} elevation={3}>
                 <Image
                     style={{ marginTop: "54px" }}
-                    src={"/assets/Logo.png"}
+                    src={"/assets//assets/Logo.png"}
                     width={70}
                     height={160}
                     alt="Logo app"
                 />
                 <div style={{ display: "inline-flex", fontSize: "46px", marginTop: "10px" }}>
-                    Iniciar<div style={{ color: theme.palette.primary.dark, marginLeft: "10px" }}>Sesión</div>
+                    Iniciar<div style={{ color: "#97B3D2", marginLeft: "10px" }}>Sesión</div>
                 </div>
                 <ThemeProvider theme={theme}>
                     <form onSubmit={handleSubmit}>
@@ -136,7 +138,7 @@ export default function Login() {
                                 onChange={handleChangeCorreo}
                                 className={kanit.className}
                                 style={correoInputStyle}
-                                placeholder="Correo Institucional"
+                                placeholder="Correo"
                             />
                             <div
                                 style={{
@@ -182,7 +184,7 @@ export default function Login() {
                                     label={<span className={kanit.className} style={checkboxLabelStyle}>Recuérdame</span>}
                                 />
                                 <Link href="/recuperar" style={{ display: "flex" }}>
-                                    <span style={linkLabelStyle}>Recordar contraseña</span>
+                                    <span style={linkLabelStyle}>Recuperar Contraseña</span>
                                 </Link>
                             </div>
                             <Button
