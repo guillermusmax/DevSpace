@@ -1,13 +1,13 @@
-"use client";
+"use client"
 import * as React from "react";
 import { useState } from "react";
 import Image from "next/image";
-import Input from "@mui/material/Input";
+import Input from '@mui/material/Input';
 import {
-  Button,
-  FormControlLabel,
-  FormGroup,
-  InputAdornment,
+    Button,
+    FormControlLabel,
+    FormGroup,
+    InputAdornment
 } from "@mui/material";
 import { Visibility } from "@mui/icons-material";
 import { VisibilityOff } from "@mui/icons-material";
@@ -17,186 +17,187 @@ import { ThemeProvider } from "@mui/material/styles";
 import { Paper } from "@mui/material";
 import Link from "next/link";
 import { Kanit } from "next/font/google";
+import theme from "../theme";
+import { useStyles } from "../layout";
 
-const kanit = Kanit({ subsets: ["latin"], weight: ["400", "700"] });
+const kanit = Kanit({ subsets: ['latin'], weight: ["400", "700"] });
 
 const wallpaperStyle = {
-  backgroundImage: "url('/assets/LoginWallpaper.svg')",
-  backgroundColor: "white",
-  backgroundSize: "contain",
-  backgroundPosition: "right center",
-  backgroundRepeat: "no-repeat",
-  minHeight: "100vh",
-  minWidth: "100vw",
-  display: "flex",
-  flexDirection: "",
+    backgroundImage: "url('/assets/LoginWallpaper.svg')",
+    backgroundColor: "white",
+    backgroundSize: "contain",
+    backgroundPosition: "right center",
+    backgroundRepeat: "no-repeat",
+    minHeight: "100vh",
+    minWidth: "100vw",
+    display: "flex",
+    flexDirection: "",
 };
 
 const correoInputStyle = {
-  backgroundColor: "el_color_que_desees",
-  marginTop: "20px",
-  borderRadius: "40px",
-  width: "420px",
-  height: "50px",
-  paddingLeft: "15px",
+    backgroundColor: theme.palette.background.input,
+    marginTop: "20px",
+    borderRadius: "40px",
+    width: "420px",
+    height: "50px",
+    paddingLeft: "15px",
 };
 
 const passwordInputStyle = {
-  backgroundColor: "el_color_que_desees",
-  marginTop: "30px",
-  borderRadius: "40px",
-  width: "420px",
-  height: "50px",
-  paddingLeft: "15px",
+    backgroundColor: theme.palette.background.input,
+    marginTop: "30px",
+    borderRadius: "40px",
+    width: "420px",
+    height: "50px",
+    paddingLeft: "15px",
 };
 
 const checkboxStyle = {
-  color: "el_color_que_desees",
+    color: theme.palette.primary.main
 };
 
 const checkboxLabelStyle = {
-  color: "el_color_que_desees",
-  marginRight: "104px",
+    marginRight: "104px",
+    color: theme.palette.secondary.label
 };
 
 const linkLabelStyle = {
-  alignSelf: "center",
-  color: "el_color_que_desees",
-  marginTop: "-2px",
-  marginLeft: "25px",
-  textDecoration: "underline",
+    alignSelf: "center",
+    color: theme.palette.secondary.label,
+    marginTop: "-2px",
+    marginLeft: "25px",
+    textDecoration: "underline",
 };
 
 const buttonStyle = {
-  marginTop: "40px",
-  borderRadius: "10px",
-  borderColor: "el_color_que_desees",
-  width: "147px",
-  alignSelf: "center",
-  fontSize: "18px",
-  textTransform: "capitalize",
+    marginTop: "40px",
+    borderRadius: "10px",
+    borderColor: theme.palette.primary.main,
+    width: "147px",
+    alignSelf: "center",
+    fontSize: "18px",
+    textTransform: "capitalize",
 };
 
 export default function Login() {
-  const [showPassword, setShowPassword] = useState(false);
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
-  const [checked, setChecked] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [correo, setCorreo] = useState("");
-  const [password, setPassword] = useState("");
-  const [displayEML, setDisplayEML] = useState("none");
-  const [displayPWD, setDisplayPWD] = useState("none");
-  const regex = /^[a-zA-Z0-9.]*@[a-zA-Z0-9]+\.[a-zA-Z0-9][a-zA-Z0-9]+$/;
+    const [showPassword, setShowPassword] = useState(false);
+    const togglePasswordVisibility = () => { setShowPassword(!showPassword); };
+    const [checked, setChecked] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [correo, setCorreo] = useState("");
+    const [password, setPassword] = useState("");
+    const [displayEML, setDisplayEML] = useState("none");
+    const [displayPWD, setDisplayPWD] = useState("none");
+    const regex = /^[a-zA-Z0-9.]*@[a-zA-Z0-9]+\.[a-zA-Z0-9][a-zA-Z0-9]+$/;
 
-  const handleChangeCorreo = (event) => {
-    const isValid = regex.test(event.target.value);
-    if (!isValid) {
-      setDisplayEML("flex");
-    } else {
-      setDisplayEML("none");
-    }
-    if (event.target.value === "") {
-      setDisplayEML("none");
-      setDisplayPWD("none");
-    }
-    setCorreo(event.target.value);
-  };
+    const handleChangeCorreo = (event) => {
+        const isValid = regex.test(event.target.value);
+        if (!isValid) {
+            setDisplayEML("flex");
+        } else {
+            setDisplayEML("none");
+        }
+        if (event.target.value === "") {
+            setDisplayEML("none");
+            setDisplayPWD("none");
+        }
+        setCorreo(event.target.value);
+    };
 
-  const handleChangePassword = (event) => {
-    setPassword(event.target.value);
-  };
+    const handleChangePassword = (event) => {
+        setPassword(event.target.value);
+    };
 
-  const handleSubmit = (event) => {
-    // Placeholder for handleSubmit, implement your logic here
-    event.preventDefault();
-    // Add your logic for handling form submission
-  };
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setIsLoading(true);
+        // Tu lógica de manejo de formulario aquí
+        setIsLoading(false);
+    };
 
-  return (
-    <div style={wallpaperStyle}>
-      <Paper style={{/* styles específicos para el Paper */}} elevation={3}>
-        <Image
-          style={{ marginTop: "54px" }}
-          src={"/assets/Logo.png"}
-          width={70}
-          height={160}
-          alt="Logo app"
-        />
-        <div style={{ display: "inline-flex", fontSize: "46px", marginTop: "10px" }}>
-          Iniciar<div style={{ color: "el_color_que_desees", marginLeft: "10px" }}>Sesión</div>
-        </div>
-        <ThemeProvider theme={{/* theme personalizado si es necesario */}}>
-          <form onSubmit={handleSubmit}>
-            <FormGroup className={kanit.className}>
-              <Input
-                id="correo"
-                onChange={handleChangeCorreo}
-                className={kanit.className}
-                style={correoInputStyle}
-                placeholder="Correo"
-              />
-              <div
-                style={{
-                  color: "red",
-                  display: displayEML,
-                  marginBottom: "-24px",
-                }}
-                role="alert"
-              >
-                Correo invalido!
-              </div>
-              <Input
-                id="password"
-                className={kanit.className}
-                style={passwordInputStyle}
-                placeholder="Contraseña"
-                type={showPassword ? "text" : "password"}
-                onChange={handleChangePassword}
-                endAdornment={
-                  <InputAdornment position="start">
-                    <IconButton
-                      onClick={togglePasswordVisibility}
-                      onMouseDown={(e) => e.preventDefault()}
-                    >
-                      {showPassword ? <Visibility /> : <VisibilityOff />}
-                    </IconButton>
-                  </InputAdornment>
-                }
-              />
-              <div style={{ color: "red", display: displayPWD }}>Credenciales invalidas, intente nuevamente.</div>
-              <div style={{ display: "inline-flex" }}>
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      style={checkboxStyle}
-                      value="check"
-                      checked={checked}
-                      onChange={() => {
-                        setChecked(!checked);
-                      }}
-                    />
-                  }
-                  label={<span className={kanit.className} style={checkboxLabelStyle}>Recuérdame</span>}
+    return (
+        <div style={wallpaperStyle}>
+            <Paper style={useStyles.paperSmall} elevation={3}>
+                <Image
+                    style={{ marginTop: "54px" }}
+                    src={"/assets/Logo.png"}
+                    width={70}
+                    height={160}
+                    alt="Logo app"
                 />
-                <Link href="/recuperar" style={{ display: "flex" }}>
-                  <span style={linkLabelStyle}>Recordar contraseña</span>
-                </Link>
-              </div>
-              <Button
-                onClick={handleSubmit}
-                variant="outlined"
-                className={kanit.className}
-                style={buttonStyle}
-                disabled={isLoading}
-              >
-                {isLoading ? 'Cargando...' : 'Iniciar Sesión'}
-              </Button>
-            </FormGroup>
-          </form>
-        </ThemeProvider>
-      </Paper>
-    </div>
-  );
+                <div style={{ display: "inline-flex", fontSize: "46px", marginTop: "10px" }}>
+                    Iniciar<div style={{ color: theme.palette.primary.dark, marginLeft: "10px" }}>Sesión</div>
+                </div>
+                <ThemeProvider theme={theme}>
+                    <form onSubmit={handleSubmit}>
+                        <FormGroup className={kanit.className}>
+                            <Input
+                                id="correo"
+                                onChange={handleChangeCorreo}
+                                className={kanit.className}
+                                style={correoInputStyle}
+                                placeholder="Correo Institucional"
+                            />
+                            <div
+                                style={{
+                                    color: "red",
+                                    display: displayEML,
+                                    marginBottom: "-24px"
+                                }}
+                                role="alert"
+                            >
+                                Correo invalido!
+                            </div>
+                            <Input
+                                id="password"
+                                className={kanit.className}
+                                style={passwordInputStyle}
+                                placeholder="Contraseña"
+                                type={showPassword ? "text" : "password"}
+                                onChange={handleChangePassword}
+                                endAdornment={
+                                    <InputAdornment position="start">
+                                        <IconButton
+                                            onClick={togglePasswordVisibility}
+                                            onMouseDown={(e) => e.preventDefault()}
+                                        >
+                                            {showPassword ? <Visibility /> : <VisibilityOff />}
+                                        </IconButton>
+                                    </InputAdornment>
+                                }
+                            />
+                            <div style={{ color: "red", display: displayPWD }}>Credenciales invalidas, intente nuevamente.</div>
+                            <div style={{ display: "inline-flex" }}>
+                                <FormControlLabel
+                                    control={
+                                        <Checkbox
+                                            style={checkboxStyle}
+                                            value="check"
+                                            checked={checked}
+                                            onChange={() => {
+                                                setChecked(!checked);
+                                            }}
+                                        />
+                                    }
+                                    label={<span className={kanit.className} style={checkboxLabelStyle}>Recuérdame</span>}
+                                />
+                                <Link href="/recuperar" style={{ display: "flex" }}>
+                                    <span style={linkLabelStyle}>Recordar contraseña</span>
+                                </Link>
+                            </div>
+                            <Button
+                                onClick={handleSubmit}
+                                variant="outlined"
+                                className={kanit.className}
+                                style={buttonStyle}
+                                disabled={isLoading}
+                            >
+                                {isLoading ? 'Cargando...' : 'Iniciar Sesión'}
+                            </Button>
+                        </FormGroup>
+                    </form>
+                </ThemeProvider>
+            </Paper>
+        </div>
+    );
 }

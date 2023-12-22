@@ -1,13 +1,61 @@
-import { Inter } from 'next/font/google'
-import './globals.css'
+// layout.js
+"use client";
+import './globals.css';
+import { Kanit } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] })
+const kanit = Kanit({ subsets: ['latin'], weight: ['400', '700'] });
 
+export const useStyles = {
+  paperSmall: {
+    marginTop: "30px",
+    marginLeft: "40px",
+    borderRadius: "25px",
+    width: "608px",
+    height: "650px",
+    alignItems: "center",
+    display: "flex",
+    flexDirection: "column"
+  },
+  paperBig: {
+    backgroundColor: "white",
+    borderRadius: "40px",
+    marginTop: "20px",
+    marginBottom: "20px",
+    marginRight: "20px",
+    marginLeft: "5rem",
+    height: "94.3vh",
+    width: "100%",
+    overflow: "auto"
+  },
+  divlinearProgressHead: {
+    width: "280px",
+    marginLeft: "50px",
+    fontSize: "20px",
+  },
+  divlinearProgress: {
+    width: "280px",
+    marginLeft: "50px",
+    marginTop: "50px",
+    fontSize: "20px",
+  },
+  linearProgress: {
+    marginTop: "5px",
+    marginBottom: "5px",
+  },
+  circularProgress: {
+    borderRadius: "50px",
+  }
+};
+
+export const metadata = {
+  title: 'DevSpace',
+  description: 'Created by Jcob and Kelvin',
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={kanit.className}>{children}</body>
     </html>
-  )
+  );
 }
