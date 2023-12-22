@@ -122,8 +122,8 @@ export default function Login() {
             <Paper style={useStyles.paperSmall} elevation={3}>
                 <Image
                     style={{ marginTop: "54px" }}
-                    src={"/assets//assets/Logo.png"}
-                    width={70}
+                    src={"/assets/assets/Logo.png"}
+                    width={170}
                     height={160}
                     alt="Logo app"
                 />
