@@ -1,5 +1,4 @@
-// layout.js
-"use client";
+"use client"
 import './globals.css';
 import { Kanit } from 'next/font/google';
 
@@ -47,11 +46,6 @@ export const useStyles = {
   }
 };
 
-export const metadata = {
-  title: 'DevSpace',
-  description: 'Created by Jcob and Kelvin',
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -59,3 +53,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+
