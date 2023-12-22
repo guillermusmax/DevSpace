@@ -42,10 +42,10 @@ export default function NotFound() {
   return (
     <div style={containerStyle}>
       <Image
-        src={"/assets/404.svg"}
-        style={{ height: "100vh", width: "100vw" }}
-        height={100}
-        width={100}
+        src={"/assets/assets/404.svg"}
+        style={{ height: "500px", width: "500px" }}
+        height={200}
+        width={200}
         alt="Error image"
       />
 
