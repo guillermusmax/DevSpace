@@ -5,7 +5,7 @@ import React from "react";
 import Image from "next/image";
 import 'bootstrap/dist/css/bootstrap.css';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
-import { Kanit } from '@next/font/google';
+import { Kanit } from "next/font/google";
 
 const kanit = Kanit({ subsets: ['latin'], weight: ["400", "700"] })
 
