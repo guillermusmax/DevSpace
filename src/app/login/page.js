@@ -25,14 +25,14 @@ const kanit = Kanit({ subsets: ['latin'], weight: ["400", "700"] });
 const wallpaperStyle = {
     backgroundImage: "url('/assets//assets/LoginWallpaper.svg')",
     backgroundColor: "white",
-    backgroundSize: "cover",  // Cambiado a "cover" para ocupar completamente el fondo
+    backgroundSize: "cover",
     backgroundPosition: "right center",
     backgroundRepeat: "no-repeat",
     minHeight: "100vh",
-    minWidth: "100vw",  // Cambiado a "100vw" para ocupar completamente el ancho de la pantalla
+    minWidth: "100vw",
     display: "flex",
-    flexDirection: "column",  // Puedes ajustar esto según tus necesidades
-  };
+    flexDirection: "column",
+};
 
 const correoInputStyle = {
     backgroundColor: theme.palette.background.input,
@@ -78,7 +78,6 @@ const buttonStyle = {
     fontSize: "18px",
     textTransform: "capitalize",
     color: "#97b3d2",
-   
 };
 
 export default function Login() {
@@ -113,8 +112,15 @@ export default function Login() {
     const handleSubmit = (event) => {
         event.preventDefault();
         setIsLoading(true);
-        // Tu lógica de manejo de formulario aquí
-        setIsLoading(false);
+        // Your logic for handling the form goes here
+        // Simulate a successful login for demonstration purposes
+        setTimeout(() => {
+            setIsLoading(false);
+            // Use Link to navigate to the main page
+            // You need to replace '/mainpage' with the correct path
+            // based on your project structure
+            window.location.href = '/mainpage';
+        }, 2000);
     };
 
     return (
@@ -187,15 +193,17 @@ export default function Login() {
                                     <span style={linkLabelStyle}>Recuperar Contraseña</span>
                                 </Link>
                             </div>
-                            <Button
-                                onClick={handleSubmit}
-                                variant="outlined"
-                                className={kanit.className}
-                                style={buttonStyle}
-                                disabled={isLoading}
-                            >
-                                {isLoading ? 'Cargando...' : 'Iniciar Sesión'}
-                            </Button>
+                            <Link href="/mainpage">
+                                    <Button
+                                        onClick={handleSubmit}
+                                        variant="outlined"
+                                        className={kanit.className}
+                                        style={buttonStyle}
+                                        disabled={isLoading}
+                                    >
+                                        {isLoading ? 'Cargando...' : 'Iniciar Sesión'}
+                                    </Button>
+                            </Link>
                         </FormGroup>
                     </form>
                 </ThemeProvider>
