@@ -21,7 +21,7 @@
         const kanit = Kanit({ subsets: ['latin'], weight: ["400", "700"] })
 
         const wallpaperStyle = {
-        backgroundColor: "#97B3D2",
+        backgroundColor: "#FFFFFF",
         minHeight: "100vh",
         minWidth: "100vw",
         display: "flex",
@@ -38,7 +38,7 @@
         };
 
         const paperStyle = {
-        width: "472px",
+        width: "202px",
         marginTop: "30px",
         marginLeft: "60px",
         display: "flex",
@@ -49,54 +49,7 @@
         flexDirection: "row",
         };
 
-        const userInfoStyle = {
-        fontSize: "18px",
-        color: "grey",
-        marginLeft: "40px",
-        width: "75%",
-        };
-
-
-        const divIndiceGraphStyle = {
-        alignSelf: "center",
-        width: "180px",
-        height: "180px"
-        };
-
-        const divIndiceStyle = {
-        display: "flex",
-        position: "absolute",
-        marginTop: "65px",
-        marginLeft: "68px",
-        fontSize: "36px"
-        };
-
-        const divIndiceTextStyle = {
-        fontSize: "24px",
-        width: "155px",
-        marginLeft: "15px",
-        alignSelf: "center",
-        marginTop: "20px"
-        };
-
-        const paperPeriodosStyle = {
-        float: "right",
-        borderRadius: "60px",
-        border: "2px solid",
-        borderColor: theme.palette.primary.main,
-        fontSize: "26px",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#ebdfe6",
-        marginTop: "-210px",
-        marginRight: "85px",
-        display: "flex",
-        flexDirection: "column",
-        height: "100px",
-        width: "250px",
-        fontWeight: "600"
-        };
-
+       
         const paperFontStyle = {
         fontSize: "20px",
         fontWeight: "100",

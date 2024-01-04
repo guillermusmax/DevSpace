@@ -17,13 +17,13 @@ export const useStyles = {
   },
   paperBig: {
     backgroundColor: "white",
-    borderRadius: "40px",
+    borderRadius: "10px",
     marginTop: "20px",
     marginBottom: "20px",
-    marginRight: "20px",
-    marginLeft: "5rem",
+    marginRight: "0px",
+    marginLeft: "400px",
     height: "94.3vh",
-    width: "100%",
+    width: "700px",
     overflow: "auto"
   },
   divlinearProgressHead: {
