@@ -1,7 +1,5 @@
         "use client"
         import React from "react";
-        import { IconButton } from "@mui/material";
-        import NotificationsIcon from "@mui/icons-material/NotificationsOutlined";
         import 'bootstrap/dist/css/bootstrap.css'
         import Paper from "@mui/material/Paper";
         import Image from "next/image";
@@ -9,10 +7,7 @@
         import { Kanit } from "next/font/google";
         import ThemeProvider from "@mui/material/styles/ThemeProvider";
         import theme from "../theme";
-        import CircularProgress from "@mui/material/CircularProgress";
         import { useEffect, useState } from "react";
-        import Container from "@mui/material/Container";
-        import Badge from '@mui/material/Badge';
         import SideBarUser from "@/components/SideBarUser/SideBarUser";
 
         // const checkTokenValidity = require("@/utils/jwtValidation").checkTokenValidity;
