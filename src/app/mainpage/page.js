@@ -2,14 +2,12 @@
         import React from "react";
         import 'bootstrap/dist/css/bootstrap.css'
         import Paper from "@mui/material/Paper";
-        import Image from "next/image";
         import { useStyles } from "../layout";
         import { Kanit } from "next/font/google";
         import ThemeProvider from "@mui/material/styles/ThemeProvider";
         import theme from "../theme";
         import { useEffect, useState } from "react";
         import SideBarUser from "@/components/SideBarUser/SideBarUser";
-        import RightBar from "@/components/RightBar/RightBar";
         // const checkTokenValidity = require("@/utils/jwtValidation").checkTokenValidity;
 
 
