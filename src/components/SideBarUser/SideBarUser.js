@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { IconButton, Button, ThemeProvider } from '@mui/material';
 import Link from 'next/link';
@@ -19,9 +19,7 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
 
-
 const kanit = Kanit({ subsets: ['latin'], weight: ["400", "700"] })
-
 
 const iconStyles = {
   width: "20px",
@@ -31,8 +29,8 @@ const iconStyles = {
 const logoContainerStyle = {
   display: "flex",
   marginRight: "10px",
-  marginLeft: "-50px",
-  marginTop: "30px",
+  marginLeft: "30px",
+  marginTop: "25px",
   justifyContent: "center",
 };
 
@@ -46,17 +44,29 @@ const iconStyle = {
 };
 
 const bottomdivStyle = {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    height: "50%",
-    marginTop: "40px",
-    marginLeft: "5px"
-    
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  height: "50%",
+  marginTop: "40px",
+  marginLeft: "5px"
+};
+
+const sideBarStyle = {
+  position: "fixed",
+  top: 10,
+  bottom: 0,
+  display: "flex",
+  flexDirection: "column",
+  backgroundColor: "transparent",
+  borderTopRightRadius: "40px",
+  borderBottomRightRadius: "40px",
+  zIndex: 1,
+  paddingLeft: "0.7rem",
+  paddinTop: "-20px",
 };
 
 export default function SideBarUser() {
-
   const [backgroundColor, setBackgroundColor] = React.useState("transparent");
   const [backgroundColor2, setBackgroundColor2] = React.useState("transparent");
   const [contained, setContained] = React.useState("");
@@ -80,7 +90,6 @@ export default function SideBarUser() {
     width: "70%",
     border: border,
     marginLeft: "5px",
-
   };
 
   const buttonStyle2 = {
@@ -109,18 +118,7 @@ export default function SideBarUser() {
   };
 
   return (
-    <Paper elevation={elevation} style={{
-      display: "flex",
-      flexDirection: "column",
-      position: "absolute",
-      height: "100%",
-      width: "280px", // Set the width to keep it open
-      backgroundColor: backgroundColor,
-      borderTopRightRadius: "40px",
-      borderBottomRightRadius: "40px",
-      zIndex: 1,
-      paddingLeft: "0.7rem"
-    }}>
+    <Paper elevation={elevation} style={sideBarStyle}>
       <ThemeProvider theme={theme}>
         <div>
           <div style={logoContainerStyle}>
@@ -145,15 +143,7 @@ export default function SideBarUser() {
           }}
         ></hr>
 
-        <div style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            height: "50%",
-            marginTop: "-20px",
-            marginLeft: "5px"
-            
-        }}>
+        <div style={bottomdivStyle}>
           <Link href="/mainpage">
             <Button style={buttonStyle} variant={contained}>
               <HomeOutlined style={iconStyle} />
