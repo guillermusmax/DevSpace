@@ -31,7 +31,7 @@
         return (
             < div style={wallpaperStyle} >
                 <SideBarUser />
-                <div style={{marginLeft:"380px", marginTop:"20px"}}   >
+                <div style={{marginLeft:"380px", marginTop:"20px", width:"500px"}}   >
                     <Timeline />
                 </div>
             </div >
