@@ -48,7 +48,7 @@ const bottomdivStyle = {
   flexDirection: "column",
   justifyContent: "center",
   height: "50%",
-  marginTop: "40px",
+  marginTop: "20px",
   marginLeft: "5px"
 };
 
@@ -62,8 +62,8 @@ const sideBarStyle = {
   borderTopRightRadius: "40px",
   borderBottomRightRadius: "40px",
   zIndex: 1,
-  paddingLeft: "0.7rem",
-  paddinTop: "-20px",
+  paddingLeft: "5px",
+  marginBottom: "60px",
 };
 
 export default function SideBarUser() {
@@ -90,6 +90,7 @@ export default function SideBarUser() {
     width: "70%",
     border: border,
     marginLeft: "5px",
+    marginTop: "-50px",
   };
 
   const buttonStyle2 = {
@@ -103,6 +104,8 @@ export default function SideBarUser() {
     marginTop: "10px",
     fontSize: "15px",
     marginLeft: "5px",
+    marginTop: "10px",
+    marginBottom: "10px"
   };
 
   const labelStyle = {
