@@ -76,8 +76,6 @@
                         </div>
                     </ThemeProvider>
                 </Paper>
-            
             </div >
-            
         );
         }
