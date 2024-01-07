@@ -9,7 +9,7 @@
         import theme from "../theme";
         import { useEffect, useState } from "react";
         import SideBarUser from "@/components/SideBarUser/SideBarUser";
-
+        import RightBar from "@/components/RightBar/RightBar";
         // const checkTokenValidity = require("@/utils/jwtValidation").checkTokenValidity;
 
 
@@ -62,19 +62,11 @@
                 <SideBarUser />
                 <Paper elevation={3} style={useStyles.paperBig}>
                     <div className={kanit.className} style={labelStyle}>
-                        Welcome, User!
+                        hola!s
                     </div>
                     <ThemeProvider theme={theme}>
                         <div style={{ display: "flex", justifyContent: "space-between" }}>
                             <Paper elevation={0} style={paperStyle}>
-                                <div style={containerUserStyle}>
-                                <Image
-                                    src="/assets/assets/userVacio.png"
-                                    alt="Profile picture"
-                                    height={150}
-                                    width={150}
-                                    />
-                                </div>
                             </Paper>
                         </div>
 
@@ -84,6 +76,8 @@
                         </div>
                     </ThemeProvider>
                 </Paper>
+            
             </div >
+            
         );
         }

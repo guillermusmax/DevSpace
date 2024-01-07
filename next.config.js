@@ -7,8 +7,14 @@ module.exports = nextConfig
 
 // next.config.js
 module.exports = {
-    images: {
-      domains: ['github.com'], // Agrega aquí los dominios que alojan tus imágenes
-    },
-  };
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '**',
+      },
+    ],
+  },
+}
   
