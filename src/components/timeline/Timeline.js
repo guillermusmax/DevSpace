@@ -6,30 +6,30 @@ import "./Timeline.css";
 function Timeline() {
   const [posts, setPosts] = useState([
     {
-      user: "redian_",
+      user: "kelvs.age",
       postImage:
-        "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
+        "https://i.pinimg.com/originals/8a/34/bb/8a34bb3aa60c2a2e71af7bc0c0d6174a.jpg",
       likes: 54,
       timestamp: "2d",
     },
     {
-      user: "johndoe",
+      user: "leomessi",
       postImage:
-        "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80",
+        "https://linksture.b-cdn.net/wp-content/uploads/2020/08/portfolio-detail-the-messi-store-img-01.jpg",
       likes: 432,
       timestamp: "2d",
     },
     {
-      user: "mariussss",
+      user: "drake",
       postImage:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+        "https://cdn.dribbble.com/users/1325623/screenshots/14844308/media/42bd0af7d8489abfb523223cc4a1eccc.png?resize=400x300&vertical=center",
       likes: 140,
       timestamp: "2d",
     },
     {
-      user: "kobee_18",
+      user: "icespice",
       postImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGCAaQ5u1TMTij5ELPWi5-VPtlSqELw-R6lj0EpYmNcGt56kOQaCokzS0IK81MOSphlkw&usqp=CAU",
+        "https://miro.medium.com/v2/resize:fit:1400/0*2_oIyLAVGL7_x0ll.png",
       likes: 14,
       timestamp: "2d",
     },

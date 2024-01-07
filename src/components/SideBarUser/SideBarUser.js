@@ -29,7 +29,7 @@ const iconStyles = {
 const logoContainerStyle = {
   display: "flex",
   marginRight: "10px",
-  marginLeft: "30px",
+  marginLeft: "-50px",
   marginTop: "25px",
   justifyContent: "center",
 };
@@ -54,16 +54,18 @@ const bottomdivStyle = {
 
 const sideBarStyle = {
   position: "fixed",
-  top: 10,
+  top: 0,
   bottom: 0,
   display: "flex",
   flexDirection: "column",
   backgroundColor: "transparent",
-  borderTopRightRadius: "40px",
-  borderBottomRightRadius: "40px",
   zIndex: 1,
   paddingLeft: "5px",
-  marginBottom: "60px",
+  marginBottom: "0px",
+  width: "280px",
+  height: "100%",
+  borderRight: "1.6px solid #ebe4e4",
+  borderRadius: "0px",
 };
 
 export default function SideBarUser() {

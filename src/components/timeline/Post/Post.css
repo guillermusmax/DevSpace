@@ -9,6 +9,7 @@
   flex-direction: row;
   align-items: center;
   margin-bottom: 10px;
+  margin-left: 0px;
 }
 
 .post__headerAuthor {
@@ -16,11 +17,13 @@
   flex-direction: row;
   align-items: center;
   font-weight: bolder;
+  color:#000000;
 }
 
 .post__headerAuthor > span {
-  color: grey;
+  color:#d1c9c9 ;
   font-size: 15px;
+  margin-left: 5px;
 }
 
 .post__image > img {
@@ -29,8 +32,7 @@
   border: 0.6px solid rgba(128, 128, 128, 0.516);
 }
 
-.post__footer {
-}
+
 
 .post__footerIcons {
   display: flex;
@@ -41,9 +43,19 @@
 
 .postIcon {
   padding: 7px;
-  font-size: 30px;
+  font-size: 42px;
 }
 
 .postIcon :hover {
   cursor: pointer;
+}
+
+.post__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 0px;
+  height: 100px;
+  border-bottom: 1.6px solid #ebe4e4;
+  margin-bottom: -20px;
 }
