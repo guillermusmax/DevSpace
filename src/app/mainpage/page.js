@@ -8,7 +8,7 @@
         import theme from "../theme";
         import { useEffect, useState } from "react";
         import SideBarUser from "@/components/SideBarUser/SideBarUser";
-        // const checkTokenValidity = require("@/utils/jwtValidation").checkTokenValidity;
+        import Timeline from "@/components/timeline/Timeline";
 
 
         const kanit = Kanit({ subsets: ['latin'], weight: ["400", "700"] })
@@ -20,34 +20,7 @@
         display: "flex",
         justifyContent: "left",
         };
-
-        const labelStyle = {
-        fontWeight: "bold",
-        fontSize: "48px",
-        display: "flex",
-        marginLeft: "40px",
-        marginTop: "10px",
-        justifyContent: "space-between"
-        };
-
-        const paperStyle = {
-        width: "202px",
-        marginTop: "30px",
-        marginLeft: "60px",
-        display: "flex",
-        };
-
-        const containerUserStyle = {
-        display: "flex",
-        flexDirection: "row",
-        };
-
-       
-        const paperFontStyle = {
-        fontSize: "20px",
-        fontWeight: "100",
-        fontStyle: "italic"
-        };
+ 
 
         export default function Mainpage() {
 
@@ -58,22 +31,10 @@
         return (
             < div style={wallpaperStyle} >
                 <SideBarUser />
-                <Paper elevation={3} style={useStyles.paperBig}>
-                    <div className={kanit.className} style={labelStyle}>
-                        hola!s
-                    </div>
-                    <ThemeProvider theme={theme}>
-                        <div style={{ display: "flex", justifyContent: "space-between" }}>
-                            <Paper elevation={0} style={paperStyle}>
-                            </Paper>
-                        </div>
-
-                        <div style={{ display: "flex", justifyContent: "space-between", alignContent: "space-between", flexDirection: "column", height: "45%", marginTop: "-55px" }}>
-                        </div>
-                        <div>
-                        </div>
-                    </ThemeProvider>
-                </Paper>
+                <div style={{marginLeft:"380px", marginTop:"20px"}}   >
+                    <Timeline />
+                </div>
             </div >
+            
         );
         }
