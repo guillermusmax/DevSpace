@@ -110,7 +110,7 @@ export default class ChatList extends Component {
             </button>
           </div>
         </div>
-        <div className="scroll-container">
+        <div className="scroll-container" style={{ marginTop: "30px" }}>
           {chatsToDisplay.map((item, index) => (
             <ChatListItems
               name={item.name}
