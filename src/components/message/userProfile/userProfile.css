@@ -67,7 +67,8 @@
 }
 .card__content {
   border-top: 1px solid #ebe7fb;
-  justify-content: justify;
+  justify-content: center;
+  text-align: center;
   overflow: auto;
   width: 100%;
   padding: 15px 20px;

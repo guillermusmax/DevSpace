@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./userProfile.css";
 
+
 export default class UserProfile extends Component {
   toggleInfo = (e) => {
     e.target.parentNode.classList.toggle("open");
@@ -21,7 +22,7 @@ export default class UserProfile extends Component {
             <i className="fa fa-angle-down"></i>
           </div>
           <div className="card__content">
-            Hola soy un rapero al cual le gusta programar y hacer música
+            Hola soy un futbolista al cual le gusta programar y hacer música
           </div>
         </div>
       </div>

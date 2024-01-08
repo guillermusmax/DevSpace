@@ -3,6 +3,8 @@ import React, { Component, useState, createRef, useEffect } from "react";
 import "./chatContent.css";
 import Avatar from "../chatList/Avatar";
 import ChatItem from "./ChatItem";
+import SendIcon from '@mui/icons-material/Send';
+import IosShareIcon from '@mui/icons-material/IosShare';
 
 export default class ChatContent extends Component {
   messagesEndRef = createRef(null);
@@ -134,16 +136,17 @@ export default class ChatContent extends Component {
         <div className="content__footer">
           <div className="sendNewMessage">
             <button className="addFiles">
-              <i className="fa fa-plus"></i>
+              <IosShareIcon />
             </button>
             <input
               type="text"
-              placeholder="Type a message here"
+              placeholder="Escriba un mensaje aqui"
               onChange={this.onStateChange}
               value={this.state.msg}
+              color="Secondary" 
             />
             <button className="btnSendMsg" id="sendMsgBtn">
-              <i className="fa fa-paper-plane"></i>
+              <SendIcon />
             </button>
           </div>
         </div>

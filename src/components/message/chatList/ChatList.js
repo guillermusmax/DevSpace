@@ -61,19 +61,35 @@ export default class ChatList extends Component {
       isOnline: true,
     },
   ];
+
   constructor(props) {
     super(props);
     this.state = {
       allChats: this.allChatUsers,
+      filteredChats: this.allChatUsers,
+      searchQuery: "",
     };
   }
+
+  handleSearch = (e) => {
+    const searchQuery = e.target.value.toLowerCase();
+    const filteredChats = this.allChatUsers.filter((user) =>
+      user.name.toLowerCase().includes(searchQuery)
+    );
+
+    this.setState({
+      filteredChats,
+      searchQuery,
+    });
+  };
+
   render() {
+    const chatsToDisplay = this.state.searchQuery
+      ? this.state.filteredChats
+      : this.state.allChats;
+
     return (
       <div className="main__chatlist">
-        <button className="btn">
-          <i className="fa fa-plus"></i>
-          <span>New conversation</span>
-        </button>
         <div className="chatlist__heading">
           <h2>Chats</h2>
           <button className="btn-nobg">
@@ -82,25 +98,29 @@ export default class ChatList extends Component {
         </div>
         <div className="chatList__search">
           <div className="search_wrap">
-            <input type="text" placeholder="Search Here" required />
+            <input
+              type="text"
+              placeholder="Busca aquí"
+              onChange={this.handleSearch}
+              value={this.state.searchQuery}
+              required
+            />
             <button className="search-btn">
               <i className="fa fa-search"></i>
             </button>
           </div>
         </div>
         <div className="scroll-container">
-          {this.state.allChats.map((item, index) => {
-            return (
-              <ChatListItems
-                name={item.name}
-                key={item.id}
-                animationDelay={index + 1}
-                active={item.active ? "active" : ""}
-                isOnline={item.isOnline ? "active" : ""}
-                image={item.image}
-              />
-            );
-          })}
+          {chatsToDisplay.map((item, index) => (
+            <ChatListItems
+              name={item.name}
+              key={item.id}
+              animationDelay={index + 1}
+              active={item.active ? "active" : ""}
+              isOnline={item.isOnline ? "active" : ""}
+              image={item.image}
+            />
+          ))}
         </div>
       </div>
     );
