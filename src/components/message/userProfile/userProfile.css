@@ -29,6 +29,9 @@
 }
 .profile__card.user__profile__image {
   padding: 20px 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .profile__card .profile__image {
   width: 100px;

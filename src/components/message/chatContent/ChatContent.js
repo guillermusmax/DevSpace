@@ -10,49 +10,49 @@ export default class ChatContent extends Component {
     {
       key: 1,
       image:
-        "https://pbs.twimg.com/profile_images/1116431270697766912/-NfnQHvh_400x400.jpg",
+        "https://www.mancity.com/meta/media/z00hnhu0/kevin-de-bruyne.png",
       type: "",
       msg: "Hola como estas?",
     },
     {
       key: 2,
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTA78Na63ws7B7EAWYgTr9BxhX_Z8oLa1nvOA&usqp=CAU",
+        "https://b.fssta.com/uploads/application/soccer/headshots/5858.vresize.350.350.medium.80.png",
       type: "other",
       msg: "Todo bien de este lado.",
     },
     {
       key: 3,
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTA78Na63ws7B7EAWYgTr9BxhX_Z8oLa1nvOA&usqp=CAU",
+        "https://b.fssta.com/uploads/application/soccer/headshots/5858.vresize.350.350.medium.80.png",
       type: "other",
       msg: "Cuentame acerca el proyecto que estas trabajando.",
     },
     {
       key: 4,
       image:
-        "https://pbs.twimg.com/profile_images/1116431270697766912/-NfnQHvh_400x400.jpg",
+        "https://www.mancity.com/meta/media/z00hnhu0/kevin-de-bruyne.png",
       type: "",
       msg: "Es algo muy interesante, una red social.",
     },
     {
       key: 5,
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTA78Na63ws7B7EAWYgTr9BxhX_Z8oLa1nvOA&usqp=CAU",
+        "https://b.fssta.com/uploads/application/soccer/headshots/5858.vresize.350.350.medium.80.png",
       type: "other",
       msg: "Genial, cuentame mas.",
     },
     {
       key: 6,
       image:
-        "https://pbs.twimg.com/profile_images/1116431270697766912/-NfnQHvh_400x400.jpg",
+        "https://www.mancity.com/meta/media/z00hnhu0/kevin-de-bruyne.png",
       type: "",
       msg: "Es un proyecto que estoy haciendo con React y Firebase.",
     },
     {
       key: 7,
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTA78Na63ws7B7EAWYgTr9BxhX_Z8oLa1nvOA&usqp=CAU",
+        "https://b.fssta.com/uploads/application/soccer/headshots/5858.vresize.350.350.medium.80.png",
       type: "other",
       msg: "Suena super cool, y hacia que esta orientado el proyecto?",
     },
@@ -101,9 +101,9 @@ export default class ChatContent extends Component {
             <div className="current-chatting-user">
               <Avatar
                 isOnline="active"
-                image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTA78Na63ws7B7EAWYgTr9BxhX_Z8oLa1nvOA&usqp=CAU"
+                image="https://b.fssta.com/uploads/application/soccer/headshots/5858.vresize.350.350.medium.80.png"
               />
-              <p>Tim Hover</p>
+              <p>Jack Grealish</p>
             </div>
           </div>
 
@@ -115,7 +115,7 @@ export default class ChatContent extends Component {
             </div>
           </div>
         </div>
-        <div className="content__body">
+        <div className="scroll-container">
           <div className="chat__items">
             {this.state.chat.map((itm, index) => {
               return (

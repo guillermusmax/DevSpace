@@ -40,8 +40,29 @@
 }
 .chatlist__items {
   margin-top: 30px;
-  overflow: auto;
+  margin: 0;
+  overflow: hidden;
+}
+
+.scroll-container {
+  overflow-y: auto;
   max-height: calc(100vh - calc(100vh / 2));
+  scrollbar-width: thin; /* Para navegadores que admiten el estándar */
+  scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* Cambia el color según tus preferencias */
+
+}
+
+/* Pseudo-elemento para personalizar el aspecto del track */
+.scroll-container::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de desplazamiento */
+  height: 5px;
+}
+
+/* Pseudo-elemento para personalizar el aspecto del handle */
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5); /* Color del handle */
+  border-radius: 4px; /* Bordes redondeados del handle */
+  height: 5px;
 }
 
 .chatlist__item {
@@ -96,6 +117,7 @@
   color: #000;
   font-weight: 600;
   font-size: 14px;
+  
 }
 .chatlist__item .userMeta span {
   margin: 0;

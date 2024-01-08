@@ -6,80 +6,57 @@ export default class ChatList extends Component {
   allChatUsers = [
     {
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTA78Na63ws7B7EAWYgTr9BxhX_Z8oLa1nvOA&usqp=CAU",
+        "https://b.fssta.com/uploads/application/soccer/headshots/5858.vresize.350.350.medium.80.png",
       id: 1,
-      name: "Tim Hover",
+      name: "Jack Grealish",
       active: true,
       isOnline: true,
     },
     {
       image:
-        "https://pbs.twimg.com/profile_images/1055263632861343745/vIqzOHXj.jpg",
+        "https://pbs.twimg.com/profile_images/1634235947674943489/zdJeuso-_400x400.jpg",
       id: 2,
-      name: "Ayub Rossi",
+      name: "Max Verstappen",
       active: false,
       isOnline: false,
     },
     {
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQEZrATmgHOi5ls0YCCQBTkocia_atSw0X-Q&usqp=CAU",
+        "https://cdn.vox-cdn.com/thumbor/UzKSGV6Bv-T0GhvtKQnjp4XEOvk=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/25061145/HardenSelfish_Getty_Ringer.jpg",
       id: 3,
-      name: "Hamaad Dejesus",
+      name: "James Harden",
       active: false,
       isOnline: false,
     },
     {
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRZ6tM7Nj72bWjr_8IQ37Apr2lJup_pxX_uZA&usqp=CAU",
+        "https://www.albat.com/__export/1653858708051/sites/debate/img/2022/05/29/el_alfa.jpg_375108060.jpg",
       id: 4,
-      name: "Eleni Hobbs",
-      active: false,
+      name: "Emanuel Herrera",
+      active: true,
       isOnline: true,
     },
     {
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRJo1MiPQp3IIdp54vvRDXlhbqlhXW9v1v6kw&usqp=CAU",
+        "https://yt3.googleusercontent.com/D1lQ87X3Hp1T-Y51_e0IylDU_3Buitkjw_9v1W54lChulTF_5VIptlXp2lyz-1gteLD_PiNU=s900-c-k-c0x00ffffff-no-rj",
       id: 5,
-      name: "Elsa Black",
+      name: "El rey del trap",
       active: false,
       isOnline: false,
     },
     {
       image:
-        "https://huber.ghostpool.com/wp-content/uploads/avatars/3/596dfc2058143-bpfull.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Conor_McGregor_2018.jpg/640px-Conor_McGregor_2018.jpg",
       id: 6,
-      name: "Kayley Mellor",
+      name: "Connor McGregor",
       active: false,
       isOnline: true,
     },
     {
       image:
-        "https://www.paintingcontest.org/components/com_djclassifieds/assets/images/default_profile.png",
+        "https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/665487/headshot/67/current",
       id: 7,
-      name: "Hasan Mcculloch",
-      active: false,
-      isOnline: true,
-    },
-    {
-      image:
-        "https://auraqatar.com/projects/Anakalabel/media//vesbrand/designer4.jpg",
-      id: 8,
-      name: "Autumn Mckee",
-      active: false,
-      isOnline: false,
-    },
-    {
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSM6p4C6imkewkCDW-9QrpV-MMAhOC7GnJcIQ&usqp=CAU",
-      id: 9,
-      name: "Allen Woodley",
-      active: false,
-      isOnline: true,
-    },
-    {
-      image: "https://pbs.twimg.com/profile_images/770394499/female.png",
-      id: 10,
-      name: "Manpreet David",
+      name: "Fernando Tatis",
       active: false,
       isOnline: true,
     },
@@ -111,7 +88,7 @@ export default class ChatList extends Component {
             </button>
           </div>
         </div>
-        <div className="chatlist__items">
+        <div className="scroll-container">
           {this.state.allChats.map((item, index) => {
             return (
               <ChatListItems
