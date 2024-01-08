@@ -163,14 +163,14 @@ export default function SideBarUser() {
             </Button>
           </Link>
 
-          <Link href="/mensajes">
+          <Link href="/messages">
             <Button style={buttonStyle2} variant={contained}>
               <MailOutlineIcon style={iconStyle} />
               <div style={divStyle}>Mensajes</div>
             </Button>
           </Link>
 
-          <Link href="/perfil">
+          <Link href="/profile">
             <Button style={buttonStyle2} variant={contained}>
               <PermIdentityOutlinedIcon style={iconStyle} />
               <div style={divStyle}>Perfil</div>

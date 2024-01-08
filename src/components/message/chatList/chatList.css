@@ -20,6 +20,7 @@
 .search_wrap {
   background-color: #e6e5ea;
   border-radius: 5px;
+  color: #000;
 }
 .search_wrap input {
   background-color: transparent;
@@ -28,6 +29,7 @@
   outline: none;
   width: 80%;
   padding-right: 0;
+  color:#000    
 }
 .search-btn {
   height: 46px;
@@ -37,6 +39,8 @@
   width: 20%;
   cursor: pointer;
   font-size: 20px;
+  color: #000;
+  
 }
 .chatlist__items {
   margin-top: 20px;

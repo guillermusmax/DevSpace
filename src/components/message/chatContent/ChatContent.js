@@ -1,5 +1,4 @@
-import React, { Component, useState, createRef, useEffect } from "react";
-
+import React, { Component, createRef } from "react";
 import "./chatContent.css";
 import Avatar from "../chatList/Avatar";
 import ChatItem from "./ChatItem";
@@ -14,7 +13,7 @@ export default class ChatContent extends Component {
       image:
         "https://www.mancity.com/meta/media/z00hnhu0/kevin-de-bruyne.png",
       type: "",
-      msg: "Hola como estas?",
+      msg: "Hola, ¿cómo estás?",
     },
     {
       key: 2,
@@ -28,7 +27,7 @@ export default class ChatContent extends Component {
       image:
         "https://b.fssta.com/uploads/application/soccer/headshots/5858.vresize.350.350.medium.80.png",
       type: "other",
-      msg: "Cuentame acerca el proyecto que estas trabajando.",
+      msg: "Cuentame acerca del proyecto en el que estás trabajando.",
     },
     {
       key: 4,
@@ -42,7 +41,7 @@ export default class ChatContent extends Component {
       image:
         "https://b.fssta.com/uploads/application/soccer/headshots/5858.vresize.350.350.medium.80.png",
       type: "other",
-      msg: "Genial, cuentame mas.",
+      msg: "Genial, cuéntame más.",
     },
     {
       key: 6,
@@ -56,7 +55,7 @@ export default class ChatContent extends Component {
       image:
         "https://b.fssta.com/uploads/application/soccer/headshots/5858.vresize.350.350.medium.80.png",
       type: "other",
-      msg: "Suena super cool, y hacia que esta orientado el proyecto?",
+      msg: "Suena super cool, ¿y hacia qué está orientado el proyecto?",
     },
   ];
 
@@ -74,10 +73,10 @@ export default class ChatContent extends Component {
 
   componentDidMount() {
     window.addEventListener("keydown", (e) => {
-      if (e.keyCode == 13) {
-        if (this.state.msg != "") {
+      if (e.keyCode === 13) {
+        if (this.state.msg !== "") {
           this.chatItms.push({
-            key: 1,
+            key: Date.now(),
             type: "",
             msg: this.state.msg,
             image:
@@ -91,8 +90,24 @@ export default class ChatContent extends Component {
     });
     this.scrollToBottom();
   }
+
   onStateChange = (e) => {
     this.setState({ msg: e.target.value });
+  };
+
+  sendMessage = () => {
+    if (this.state.msg !== "") {
+      this.chatItms.push({
+        key: Date.now(),
+        type: "",
+        msg: this.state.msg,
+        image:
+          "https://pbs.twimg.com/profile_images/1116431270697766912/-NfnQHvh_400x400.jpg",
+      });
+      this.setState({ chat: [...this.chatItms] });
+      this.scrollToBottom();
+      this.setState({ msg: "" });
+    }
   };
 
   render() {
@@ -103,7 +118,7 @@ export default class ChatContent extends Component {
             <div className="current-chatting-user">
               <Avatar
                 isOnline="active"
-                image="https://b.fssta.com/uploads/application/soccer/headshots/5858.vresize.350.350.medium.80.png"
+                image="https://www.mancity.com/meta/media/z00hnhu0/kevin-de-bruyne.png"
               />
               <p>Jack Grealish</p>
             </div>
@@ -140,12 +155,11 @@ export default class ChatContent extends Component {
             </button>
             <input
               type="text"
-              placeholder="Escriba un mensaje aqui"
+              placeholder="Escriba un mensaje aquí"
               onChange={this.onStateChange}
               value={this.state.msg}
-              color="Secondary" 
             />
-            <button className="btnSendMsg" id="sendMsgBtn">
+            <button className="btnSendMsg" id="sendMsgBtn" onClick={this.sendMessage}>
               <SendIcon />
             </button>
           </div>
