@@ -23,7 +23,7 @@ import { useStyles } from "../layout";
 const kanit = Kanit({ subsets: ['latin'], weight: ["400", "700"] });
 
 const wallpaperStyle = {
-    backgroundImage: "url('/assets//assets/LoginWallpaper.svg')",
+    backgroundImage: "url('/assets/LoginWallpaper.svg')",
     backgroundColor: "white",
     backgroundSize: "cover",
     backgroundPosition: "right center",

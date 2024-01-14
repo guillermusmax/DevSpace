@@ -1,8 +1,9 @@
+import Login from "./login/page.js";
 
 export default function Home() {
   return (
     <main className=''>
-      hola
+      <Login/>
     </main>
   )
 }
