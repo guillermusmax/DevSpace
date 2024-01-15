@@ -1,8 +1,37 @@
 "use client"
 import './globals.css';
-import { Kanit } from 'next/font/google';
+import { Inter } from 'next/font/google';
+// import authReducer from "./state"
+// import { configureStore } from '@reduxjs/toolkit';
+// import { Provider } from 'react-redux';
+// import {
+//   persistStore,
+//   persistReducer,
+//   FLUSH,
+//   REHYDRATE,
+//   PAUSE,
+//   PERSIST,
+//   PURGE,
+//   REGISTER
+// } from "redux-persist";
+// import storage from "redux-persist/lib/storage";
+// import { PersistGate } from 'redux-persist/integration/react';
 
-const kanit = Kanit({ subsets: ['latin'], weight: ['400', '700'] });
+// const persistConfig = { key: "root", storage, version: 1};
+// const persistedReducer = persistReducer(persistConfig, authReducer);
+// const store = configureStore({
+//   reducer: persistedReducer,
+//   middleware: (getDefaultMiddleware) =>
+//   getDefaultMiddleware({
+//     serializableCheck: {
+//       ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+//     },
+//   }),
+// });
+
+const inter  = Inter({ subsets: ['latin'] });
+
+
 
 export const useStyles = {
   paperSmall: {
@@ -49,7 +78,11 @@ export const useStyles = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={kanit.className}>{children}</body>
+      {/* <Provider store={store}> */}
+        {/* <PersistGate loading={null} persistor={persistStore(store)}> */}
+      <body className={inter.className}>{children}</body>
+      {/* </PersistGate>
+      </Provider> */}
     </html>
   );
 }

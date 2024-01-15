@@ -17,13 +17,13 @@ import { ThemeProvider } from "@mui/material/styles";
 import { Paper } from "@mui/material";
 import Link from "next/link";
 import { Kanit } from "next/font/google";
-import theme from "../theme";
-import { useStyles } from "../layout";
+import theme from "../../theme";
+import { useStyles } from "../../layout";
 
 const kanit = Kanit({ subsets: ['latin'], weight: ["400", "700"] });
 
 const wallpaperStyle = {
-    backgroundImage: "url('/assets//assets/LoginWallpaper.svg')",
+    backgroundImage: "url('/assets/LoginWallpaper.svg')",
     backgroundColor: "white",
     backgroundSize: "cover",
     backgroundPosition: "right center",
@@ -128,7 +128,7 @@ export default function Login() {
             <Paper style={useStyles.paperSmall} elevation={3}>
                 <Image
                     style={{ marginTop: "54px" }}
-                    src={"/assets/assets/Logo.png"}
+                    src={"/assets/Logo.png"}
                     width={170}
                     height={160}
                     alt="Logo app"

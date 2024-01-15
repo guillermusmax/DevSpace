@@ -128,7 +128,7 @@ export default function SideBarUser() {
         <div>
           <div style={logoContainerStyle}>
             <Image
-              src={"/assets/assets/LOGOSINFONDO.svg"}
+              src={"/assets/LOGOSINFONDO.svg"}
               width={60}
               height={60}
               alt="Logo app"
@@ -163,7 +163,7 @@ export default function SideBarUser() {
             </Button>
           </Link>
 
-          <Link href="/messages">
+          <Link href="/">
             <Button style={buttonStyle2} variant={contained}>
               <MailOutlineIcon style={iconStyle} />
               <div style={divStyle}>Mensajes</div>
