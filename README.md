@@ -37,5 +37,5 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 =======
 # DevSpace
-Proyecto de Red Social
+🔴 Proyecto de Red Social 🔴
 >>>>>>> e1be5c1435f01c44cdb276fad834d172a96a616f
